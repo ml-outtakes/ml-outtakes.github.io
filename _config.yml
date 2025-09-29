@@ -1,0 +1,13 @@
+title: ML Outtakes
+description: Anecdotes on how statistics, ML, and AI sausages are made.
+url: https://ml-outtakes.github.io/
+exclude:
+  - .git
+  - venv
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+markdown: kramdown
+collections:
+  articles:
+    output: true
