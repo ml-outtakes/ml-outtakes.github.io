@@ -50,7 +50,7 @@ Given a *single* seed from the CLI, we first initialize a `main_key`, a [random 
 >>> train_rngs = nnx.Rngs(train_key)
 ```
 
-### Creating Data Processors and Loaders
+### Creating a Data Pipeline With Grain
 
 [Grain](https://google-grain.readthedocs.io/), the data preprocessing and loading library we will use, [offers two interfaces](https://google-grain.readthedocs.io/en/latest/api_choice.html): [`DataLoader`](https://google-grain.readthedocs.io/en/stable/tutorials/data_loader_tutorial.html) and [`Dataset`](https://google-grain.readthedocs.io/en/stable/tutorials/dataset_basic_tutorial.html). The former has an interface that is immediately familiar to PyTorch users but offers less flexibility. The latter "is a low-level API that uses chaining syntax to define data transformation steps." We use it here to load the classic MNIST dataset for digit classification using [`tensorflow_datasets`](https://www.tensorflow.org/datasets) as the source data.
 
