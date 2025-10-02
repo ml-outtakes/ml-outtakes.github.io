@@ -180,14 +180,12 @@ Let's put it all together into a training loop that iterates over batches and up
 ...        progress.set_description(f"loss: {loss:.3f}")
 ```
 
-Running the script from the command line shows that the model is learning something, reducing the loss from 2.309 to 0.007 over three epochs.
+We explicitly iterate over the `train_data_iterator` rather than implicitly over the `train_dataset` because we need to keep track of the `train_data_iterator` state. Running the script from the command line shows that the model is learning *something*, reducing the loss from 2.309 to 0.007 over three epochs.
 
 ```bash
 $ uv run python train.py demo/one 3
 loss: 0.007: 100%|██████████| 2812/2812 [00:36<00:00, 98.36it/s]
 ```
-
-We explicitly iterate over the `train_data_iterator` rather than implicitly over the `train_dataset` because we need to keep track of the `train_data_iterator` state.
 
 ## Saving Checkpoints
 
