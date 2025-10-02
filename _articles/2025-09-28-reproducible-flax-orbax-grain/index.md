@@ -317,7 +317,7 @@ Checkpoints are not very useful if we cannot resume training—which we'll tackl
 
 We increment `self.step` by 1 after restoring because checkpoint N contains the model state after completing training step N. When we resume, we need to start training at step N+1 to avoid re-training the same step. This increment, combined with passing `start=state.step` to `enumerate` in the training loop, ensures we pick up exactly where we left off.
 
-The `args` are identical to the `save` implementation except `...Save` is replaced by `...Restore`. `restored` is a dictionary-like object holding the restored checkpoint, and we use it to update the state inplace. However, `restore` is an *instance* method, so we already need to have a state to restore the state—a chicken and egg problem. Orbax requires a skeleton of the objects to restore so it knows how to populate the instance. Luckily `nnx.eval_shape` allows us to construct abstract models, optimizers, and `Rngs` without allocating the tensors.
+The `args` are identical to the `save` implementation except `...Save` is replaced by `...Restore`. `restored` is a dictionary-like object holding the restored checkpoint, and we use it to update the state in-place. However, `restore` is an *instance* method, so we already need to have a state to restore the state—a chicken and egg problem. Orbax requires a skeleton of the objects to restore so it knows how to populate the instance. Luckily `nnx.eval_shape` allows us to construct abstract models, optimizers, and `Rngs` without allocating the tensors.
 
 ```python
 >>> if output.is_dir():
