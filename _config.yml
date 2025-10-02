@@ -2,8 +2,10 @@ title: ML Outtakes
 description: Anecdotes on how statistics, ML, and AI sausages are made.
 url: https://ml-outtakes.github.io/
 exclude:
+  # For some reason, this needs to be specified in full, and '_articles/*/.venv' or
+  # `**/.venv` don't work (cf. https://github.com/jekyll/jekyll/issues/9879).
+  - _articles/2025-09-28-reproducible-flax-orbax-grain/.venv
   - .git
-  - venv
   - vendor
   - Gemfile
   - Gemfile.lock
