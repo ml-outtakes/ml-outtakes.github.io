@@ -1,6 +1,9 @@
+__pycache__/
 _site/
 .DS_Store
 .jekyll-cache/
 .jekyll-metadata
 .vscode/
+demo/
+playground/
 vendor/

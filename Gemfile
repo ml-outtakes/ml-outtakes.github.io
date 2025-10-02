@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.9'
+gem 'jekyll'
 gem 'kramdown-parser-gfm'
+gem 'rouge'

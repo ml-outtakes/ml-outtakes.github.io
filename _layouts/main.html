@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: 'ML Outtakes'}}</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css/github.css">
 </head>
 
 <body>
@@ -16,6 +17,9 @@
       </div>
     </div>
   </section>
+  <!-- Highlight lines in javascript because Rouge would require Liquid syntax for highlighting server-side. -->
+  <script src="/assets/js/hll.js"></script>
+  <script>window.addEventListener("load", highlightAllLines);</script>
 </body>
 
 </html>

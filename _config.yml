@@ -7,7 +7,12 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
-markdown: kramdown
 collections:
   articles:
     output: true
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
