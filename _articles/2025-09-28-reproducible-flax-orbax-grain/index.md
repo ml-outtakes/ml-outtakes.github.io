@@ -33,6 +33,8 @@ options:
                         checkpoint every N steps
 ```
 
+The full script is [available on GitHub](https://github.com/ml-outtakes/ml-outtakes.github.io/blob/main/_articles/2025-09-28-reproducible-flax-orbax-grain/train.py).
+
 ## Basic Training Script
 
 ### Handling Random State
